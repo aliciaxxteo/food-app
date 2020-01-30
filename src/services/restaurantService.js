@@ -81,7 +81,7 @@ let restaurants = [
     closingTime: "19:00",
     cuisine: { _id: "5c3430ecfc13ae122d000003", name: "Chinese" },
     imageUrl: "images/restaurants/5c342ac9fc13ae39f8000007.jpg",
-    averagePrice: 28
+    averagePrice: 28333333333.133333333
   },
   {
     _id: "5c342ac9fc13ae39f8000008",
@@ -115,8 +115,10 @@ export function getRestaurant(id) {
 }
 
 export function deleteRestaurant(id) {
+  console.log('deleting', arguments)
   const found = restaurants.find(restaurant => restaurant._id === id);
   restaurants = restaurants.filter(restaurant => restaurant._id !== id);
+  console.log('delete after fliter', restaurants)
   return found;
 }
 
