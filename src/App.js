@@ -20,6 +20,10 @@ class App extends Component {
                 path="/restaurants/new"
                 render={props => <RestaurantForm {...props} returnPath="/admin" />}
               />
+              <Route
+                path="/restaurants/:id"
+                render={props => <RestaurantForm {...props} returnPath="/admin" />}
+              />
               <Route path="/" component={HomePage} />
             </Switch>
           </main>
